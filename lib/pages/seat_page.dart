@@ -42,8 +42,9 @@ void bookSeats() {
           //onPressed: () => Navigator.pop(context), // 다이얼로그 닫기
           onPressed: () {
           setState(() {
-            selectedSeats.clear(); // ✅ 선택된 좌석 초기화
+            selectedSeats.clear(); // 선택된 좌석 초기화
           });
+          Navigator.of(context).pop(); // 다이얼로그 닫기 추가
         },
         ),
         CupertinoDialogAction(

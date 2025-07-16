@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/station_type.dart';
+import 'package:flutter_train_app/models/station_type.dart';
 
 class StationListPage extends StatelessWidget {
   final StationType type;

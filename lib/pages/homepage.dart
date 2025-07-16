@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'station_list_page.dart';
-import 'seat_page.dart';
-import '../models/station_type.dart';
+import 'package:flutter_train_app/pages/station_list_page.dart';
+import 'package:flutter_train_app/pages/seat_page.dart';
+import 'package:flutter_train_app/models/station_type.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
