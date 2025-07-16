@@ -12,9 +12,10 @@ class TrainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '기차 예매',
-
-      home: const HomePage(),
+      home: HomePage(),
+      debugShowCheckedModeBanner: false, // 디버그 배너 제거
     );
   }
+
+  
 }

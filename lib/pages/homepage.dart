@@ -56,7 +56,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        backgroundColor: Colors.pink[50],
         title: const Text('기차 예매'),
         centerTitle: true,
       ),
