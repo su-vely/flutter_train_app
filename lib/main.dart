@@ -15,7 +15,5 @@ class TrainApp extends StatelessWidget {
       home: HomePage(),
       debugShowCheckedModeBanner: false, // 디버그 배너 제거
     );
-  }
-
-  
+  } 
 }

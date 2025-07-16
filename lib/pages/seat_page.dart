@@ -32,31 +32,33 @@ void bookSeats() {
   if (selectedSeats.isEmpty) return;
 
   showCupertinoDialog(
-    context: context,
-    builder: (_) => CupertinoAlertDialog(
-      title: const Text('예매 확인'),
-      content: Text('${selectedSeats.length}개의 좌석을 예매하시겠습니까?'),
+  context: context,
+  builder: (context) {
+    return CupertinoAlertDialog(
+      title: const Text("예매 하시겠습니까?"),
+      content: Text("좌석 : ${selectedSeats.join(', ')}"),
       actions: [
         CupertinoDialogAction(
-          child: const Text('취소'),
-          //onPressed: () => Navigator.pop(context), // 다이얼로그 닫기
+          child: const Text("취소", style: TextStyle(color: Colors.red)),
           onPressed: () {
-          setState(() {
+            setState(() {
             selectedSeats.clear(); // 선택된 좌석 초기화
           });
-          Navigator.of(context).pop(); // 다이얼로그 닫기 추가
-        },
+            Navigator.of(context).pop();
+          },
         ),
         CupertinoDialogAction(
-          child: const Text('확인'),
+          child: const Text("확인"),
           onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop(); // 다이얼로그만 닫음
-            Navigator.popUntil(context, (route) => route.isFirst); // 홈으로 이동
+            // 예매 로직 수행
+            Navigator.of(context).pop();
+            Navigator.popUntil(context, ModalRoute.withName('/'));
           },
         ),
       ],
-    ),
-  );
+    );
+  },
+);
 }
 
   Widget buildSeat(String seatId) {
